@@ -5,7 +5,7 @@
     </div>
     <v-row justify="center" align="center">
       <v-col cols="12" class="text-center">
-        <h1 ref="ip-label" class="display-4">{{ ip }}</h1>
+        <h1 ref="ip-label" :class="$vuetify.breakpoint.mdAndUp ? 'display-4' : 'display-1'">{{ ip }}</h1>
       </v-col>
       <v-col cols="12" class="text-center">
         <v-btn outlined @click="copyIp">Copy</v-btn>
