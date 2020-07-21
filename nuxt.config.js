@@ -18,7 +18,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Finding your Ip had never been so funny' }
+      { hid: 'description', name: 'description', content: 'Simple application that shows your public ip with an extraordinary quote' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
