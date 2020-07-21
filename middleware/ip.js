@@ -1,4 +1,9 @@
 export default function ({ req, store }) {
-  const ip = req.connection.remoteAddress || req.socket.remoteAddress
+  const xForwardedFor = req.headers['x-forwarded-for']
+
+  const ip = Array.isArray(xForwardedFor)
+    ? xForwardedFor.split(',').pop()
+    : req.connection.remoteAddress
+
   store.commit('setIp', ip)
 }
